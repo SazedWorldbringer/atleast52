@@ -32,25 +32,10 @@ const Layout = ({ children, home }) => {
               alt="Artwork showing rectangles shifting at the bottom in a weird way"
             />
             <h1 className={utilStyles.heading2Xl}>{title}</h1>
-            <h2 className={utilStyles.headingMd} style={{}}>{subTitle}</h2>
+            <h2 className={utilStyles.headingXl} style={{ margin: '-1rem 0 2rem' }}>{subTitle}</h2>
           </>
         ) : (
           <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/weird-rect-thing.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt="Artwork showing rectangles shifting at the bottom in a weird way"
-              />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {title}
-              </Link>
-            </h2>
           </>
         )}
       </header>
@@ -59,7 +44,10 @@ const Layout = ({ children, home }) => {
       </main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">Back home</Link>
+          {/*<Link href="/" className={utilStyles.colorInherit}>*/}
+          <Link className={utilStyles.headingXl} href="/">
+            {title}
+          </Link>
         </div>
       )}
     </div>
