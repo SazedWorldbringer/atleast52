@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Date from '../components/date'
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/artworks.js'
@@ -26,27 +27,27 @@ export default function Home({ allPostsData }) {
           I will post at least one artwork a week, more if I can manage
         </p>
       </section>
-    <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-     <h2 className={utilStyles.headingLg}>Artworks</h2>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Artworks</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, preview, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-            <Image
-              priority
-              src={preview}
-              width={300}
-              height={300}
-              alt="Artwork showing rectangles shifting at the bottom in a weird way"
-            />
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
+              <Link href={`/artworks/${id}`}>
+                <Image
+                  priority
+                  src={preview}
+                  width={300}
+                  height={300}
+                  alt="Artwork showing rectangles shifting at the bottom in a weird way"
+                />
+              </Link>
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
             </li>
           ))}
         </ul>
-    </section>
+      </section>
     </Layout>
   );
 }
