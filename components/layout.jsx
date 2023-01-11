@@ -24,13 +24,6 @@ const Layout = ({ children, home }) => {
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
-              priority
-              src="/images/weird-rect-thing.jpg"
-              height={144}
-              width={144}
-              alt="Artwork showing rectangles shifting at the bottom in a weird way"
-            />
             <h1 className={utilStyles.heading2Xl}>{title}</h1>
             <h2 className={utilStyles.headingXl} style={{ margin: '-1rem 0 2rem' }}>{subTitle}</h2>
           </>
