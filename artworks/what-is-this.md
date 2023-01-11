@@ -1,6 +1,7 @@
 ---
 title: 'Wha- HOW?!'
 date: '2023-01-08'
+preview: '/images/weird-rect-thing.jpg'
 ---
 
 ![Vertically longer rectangles with their heights shifting in a cool way, simulating waves using Perlin Noise](../public/gifs/01.gif)
