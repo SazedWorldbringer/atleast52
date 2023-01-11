@@ -4,9 +4,9 @@ date: '2023-01-08'
 preview: '/images/weird-rect-thing.jpg'
 ---
 
-![Vertically longer rectangles with their heights shifting in a cool way, simulating waves using Perlin Noise](../public/gifs/01.gif)
+![Vertically longer rectangles with their heights shifting in a cool way, simulating waves using Perlin Noise](/gifs/01.gif)
 
-Don&apos;t ask me how I made this. I don&apos; know!
+Don&apos;t ask me how I made this. I don&apos;t know!
 
 I was just trying to use perlin noise in a cool way to have the rectangles&apos; length change. I don&apos; know how I ended up with this... very cool thing.
 Suffering with success.
