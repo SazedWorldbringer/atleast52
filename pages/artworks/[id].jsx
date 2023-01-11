@@ -12,7 +12,7 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const postData = getPostData(params.id);
+  const postData = await getPostData(params.id);
 
   return {
     props: {
@@ -26,17 +26,9 @@ const Artwork = ({ postData }) => {
     <Layout>
       {postData.title}
       <br />
-      <Image
-        priority
-        src={postData.preview}
-        alt={postData.title}
-        width={300}
-        height={300}
-      />
-      <br />
-      {postData.id}
-      <br />
       {postData.date}
+      <br />
+      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
   )
 }
